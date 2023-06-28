@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><!-- @Author: Monei Bakang Mothuti -->
+<resources>
+    <string name="sign_in">Sign in</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">login</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="or_sign_in_with">Or Sign In With</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="logout">LOGOUT</string>
+    <string name="mail">Mail</string>
+    <string name="name">Name</string>
+    <string name="welcome">Welcome</string>
+</resources>

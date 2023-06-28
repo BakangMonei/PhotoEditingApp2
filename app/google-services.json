@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "704801088159",
+    "firebase_url": "https://photovideoapp-5c132-default-rtdb.firebaseio.com",
+    "project_id": "photovideoapp-5c132",
+    "storage_bucket": "photovideoapp-5c132.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704801088159:android:648958bbc025ed08a9b8aa",
+        "android_client_info": {
+          "package_name": "com.neizathedev.photoandvideoeditor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "704801088159-ddhrftmr7mt9kdds621jmispip3be542.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo7P6i9C9hH89BrwmMAPVmgBo-paOjs4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "704801088159-ddhrftmr7mt9kdds621jmispip3be542.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
