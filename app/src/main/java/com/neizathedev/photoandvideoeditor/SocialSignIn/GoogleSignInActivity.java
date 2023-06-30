@@ -1,4 +1,4 @@
-package com.neizathedev.photoandvideoeditor;
+package com.neizathedev.photoandvideoeditor.SocialSignIn;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +15,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
+import com.neizathedev.photoandvideoeditor.DashBoard;
+import com.neizathedev.photoandvideoeditor.R;
 
 public class GoogleSignInActivity extends AppCompatActivity {
 
@@ -55,7 +57,7 @@ public class GoogleSignInActivity extends AppCompatActivity {
                 task.getResult(ApiException.class);
                 HomeActivity();
             } catch (ApiException e) {
-                Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Error " + e, Toast.LENGTH_SHORT).show();
             }
         }
     }

@@ -5,6 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -16,15 +17,22 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AlertDialog;
+
 import android.content.DialogInterface;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
 import android.Manifest;
+
 import com.google.firebase.database.FirebaseDatabase;
+import com.neizathedev.photoandvideoeditor.SocialSignIn.FacebookSignInActivity;
+import com.neizathedev.photoandvideoeditor.SocialSignIn.GoogleSignInActivity;
 
 /**
  * @Author: Monei Bakang Mothuti
@@ -59,11 +67,20 @@ public class MainActivity extends AppCompatActivity {
         forgotpass = (Button) findViewById(R.id.forgotpass);
         signUp = (Button) findViewById(R.id.signUp);
 
-        googlesignup = (ImageView) findViewById(R.id.googlesignup);
-        fbsignup = (ImageView) findViewById(R.id.fbsignup);
-        twittersignup = (ImageView) findViewById(R.id.twittersignup);
-        instagramicoon = (ImageView) findViewById(R.id.instasignup);
+        googlesignup = (ImageView) findViewById(R.id.googlesignup); // Done
+        fbsignup = (ImageView) findViewById(R.id.fbsignup); // Done [But not signing in]
+        twittersignup = (ImageView) findViewById(R.id.twittersignup); // Needs an API either *Amazon* or *Paid Twitter*
+        instagramicoon = (ImageView) findViewById(R.id.instasignup); // Needs to be integrated via 'Facebook' Login
 
+        // Facebook Login
+        fbsignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToFacebook();
+            }
+        });
+
+        // Firebase Implementation
         mAuth = FirebaseAuth.getInstance();
 
         // Logging In either as Admin or User
@@ -110,7 +127,6 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
-
         // Creating an user account
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -184,6 +200,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToGoogle() {
         Intent intent = new Intent(MainActivity.this, GoogleSignInActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToFacebook() {
+        Intent intent = new Intent(MainActivity.this, FacebookSignInActivity.class);
         startActivity(intent);
     }
 }

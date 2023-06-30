@@ -11,4 +11,6 @@
     <string name="mail">Mail</string>
     <string name="name">Name</string>
     <string name="welcome">Welcome</string>
+    <string name="facebook_app_id">150605041316648</string>
+    <string name="facebook_client_token">339bef4815b6779f03ee20e167427d20</string>
 </resources>

@@ -17,7 +17,14 @@
         android:name="android.hardware.telephony"
         android:required="false" />
 
+    <uses-permission
+        android:name="com.google.android.gms.permission.AD_ID"
+        tools:node="remove" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <queries>
+        <package android:name="com.facebook.katana" />
+    </queries>
 
     <application
         android:allowBackup="true"
@@ -30,7 +37,19 @@
         android:theme="@style/Theme.PhotoAndVideoEditor"
         tools:targetApi="31">
         <activity
-            android:name=".GoogleSignInActivity"
+            android:name=".UpdateProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SocialSignIn.FacebookSignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SocialSignIn.GoogleSignInActivity"
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"
@@ -50,6 +69,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider150605041316648"
+            android:exported="true" />
     </application>
 
 </manifest>
